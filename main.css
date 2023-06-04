@@ -1,0 +1,111 @@
+:root {
+    --black_for_text: #393646;
+    --gray1: #4F4557;
+    --gray2: #6D5D6E;
+    --gray2-1: #6d5d6e43;
+    --white: #F4EEE0;
+    --red: rgb(115, 25, 25);
+    --input_background: rgba(115, 25, 25, 0);
+}
+
+body {
+    background-color: var(--white);
+}
+
+.main_content {
+    width: 70vw;
+    margin: 0 auto;
+    background: var(--gray2-1);
+    height: 100%;
+    padding: 1rem 2rem;
+}
+
+.hedding {
+    color: var(--black_for_text);
+    font-size: 1.5rem;
+    border: var(--gray2) 1px solid;
+    padding: 1rem;
+    border-radius: 8px;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0px 0px 50px -20px var(--red);
+}
+
+.scheme {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.drawing {
+    border: #393646 solid 1px;
+    border-radius: 16px;
+    width: 40vw;
+    margin: 1rem auto;
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+}
+
+#L {
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    width: 8rem;
+    font-size: 2rem;
+    background: var(--input_background);
+}
+
+#Ra {
+    position: absolute;
+    top: 81%;
+    left: 32%;
+    width: 8rem;
+    font-size: 2rem;
+}
+
+#a {
+    position: absolute;
+    top: 47%;
+    left: 39%;
+    width: 8rem;
+    font-size: 2rem;
+    background: var(--input_background);
+    
+}
+
+.input_data {
+    width: 15vw;
+    margin: 0rem auto;
+}
+
+.btn {
+    width: 10vw;
+    margin: 1rem auto 1rem auto;
+}
+
+.P_X {
+    width: 30%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    gap: 2rem;
+    place-items: center;
+    margin: 0rem;
+}
+
+#add {
+    width: fit-content;
+    font-weight: 600;
+}
+
+.buttons {
+    width: 50%;
+    margin: auto;
+}
+
+.Pnumber {
+    width: 5rem;
+}

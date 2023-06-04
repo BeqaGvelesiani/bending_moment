@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>მღუნავი მომენტი</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="main_content">
+      <h1 class="hedding" id="final_result">მღუნავი მომენტი O წერტილისთვის</h1>
+      <div class="input_section">
+        <div class="scheme">
+          <img src="scheme.jpg" alt="" class="drawing" />
+          <input type="number" class="form-control" id="a" value="0" />
+          <h1 class="Ra" id="Ra"></h1>
+          <input type="number" class="form-control" id="L" value="12" />
+        </div>
+
+        <div class="inputs" id="inputs">
+          <div class="P_X">
+            <h1 class="Pnumber">1</h1>
+            <input
+              type="number"
+              class="form-control input_data"
+              id="X1"
+              placeholder="X1-ის სიდიდე"
+            />
+            <input
+              type="number"
+              class="form-control input_data"
+              id="P1"
+              placeholder="P1-ის სიდიდე"
+            />
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="add" type="button" class="btn btn-success">P+</button>
+          <button id="do_it" type="button" class="btn btn-success">
+            გამოთვლა
+          </button>
+          <button id="clear" type="button" class="btn btn-danger">
+            გასუფთავება
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
