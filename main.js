@@ -1,4 +1,7 @@
-import { check_type } from "./checkType.js";
+import { check_type } from "./functions.js";
+import { sum_of_array_intil_number } from "./functions.js";
+import { array_until_number } from "./functions.js";
+import { find_B } from "./functions.js";
 
 let L = Number(document.getElementById("L").value);
 const actionBTN = document.getElementById("do_it");
@@ -14,35 +17,54 @@ let count = 1;
 let xArr = [];
 let pArr = [];
 
+//-
+//-
+//-
+//-
+//-
+//-
 //[actionBTN--------------------
 actionBTN.addEventListener("click", function () {
   xArr = [];
   pArr = [];
 
+  let A = Number(a.value);
   let Ra = "";
   let p_deltaL = [];
   L = Number(document.getElementById("L").value);
   for (let i = 1; i <= count; i++) {
-    let newX = document.getElementById(`X${i}`).value;
-    let newP = document.getElementById(`P${i}`).value;
+    let newX = Number(document.getElementById(`X${i}`).value);
+    let newP = Number(document.getElementById(`P${i}`).value);
     xArr.push(newX);
     pArr.push(newP);
     p_deltaL.push(newP * currentP_delta_L(i));
     Ra = sum_of_array(p_deltaL) / L;
     document.getElementById("Ra").innerText = Ra.toFixed(3);
   }
-  let O = Ra * Number(a.value) - Number(pArr[0]) * (L - Number(xArr[0]));
-  final_result.innerText = `მღუნავი მომენტი O წერტილისთვის = ${O}`;
-  console.log(xArr);
-  console.log(pArr);
+
+  //console.log(xArr);
+  //console.log(pArr);
+
+  let sum_p = sum_of_array_intil_number(xArr, A);
+  let current_P = array_until_number(xArr, A);
+
+  console.log("sum_p = " + sum_p);
+  console.log("current_P = " + current_P);
+
+  let O = Ra * A - find_B(A, xArr, pArr, current_P);
+  final_result.innerText = `მღუნავი მომენტი O წერტილისთვის = ${O.toFixed(3)}`;
 });
 //-------------------actionBTN]
-
+//-
+//-
+//-
+//-
+//-
+//-
 //[addBTN----------------
 
 add.addEventListener("click", function () {
   count += 1;
-
   const div = document.createElement("div");
   div.className = "P_X";
   div.innerHTML = `
@@ -61,11 +83,16 @@ add.addEventListener("click", function () {
           />
     `;
   inputs.appendChild(div);
-  console.log("count: " + count);
+  //console.log("count: " + count);
 });
 
 //----------------addBTN]
-
+//-
+//-
+//-
+//-
+//-
+//-
 //[clearBTN-------------------
 
 clearBTN.addEventListener("click", function () {
@@ -82,7 +109,20 @@ clearBTN.addEventListener("click", function () {
   console.log(pArr);
 });
 
-//--------------clearBTN]
+//----------------clearBTN]
+//-
+//-
+//-
+//-
+//-
+//-
+
+function sum_of_array(ARR) {
+  let sum = ARR.reduce(function (acumulator, member) {
+    return acumulator + member;
+  });
+  return sum;
+}
 
 function currentP_delta_L(n) {
   let Xsum = 0;
@@ -94,12 +134,8 @@ function currentP_delta_L(n) {
   return delta_L;
 }
 
-// sum of array members
+let test = [1, 2, 1, 3, 2.1, 7, 12];
 
-function sum_of_array(ARR) {
-  let sum = 0;
-  for (let i = 0; i < ARR.length; i++) {
-    sum += ARR[i];
-  }
-  return sum;
-}
+//console.log(test);
+//console.log(sum_of_array_intil_number(test, 9.3));
+//.log(array_until_number(test, 9.2));
