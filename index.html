@@ -22,13 +22,74 @@
   </head>
   <body>
     <div class="main_content">
-      <h1 class="hedding" id="final_result">მღუნავი მომენტი O წერტილისთვის</h1>
+      <h1 class="hedding" id="final_result">მღუნავი მომენტი O კვეთისთვის</h1>
       <div class="input_section">
-        <div class="scheme">
+        <div class="canvas" id="canvas_drawing" style="display: none">
+          <div class="bim" id="bim">
+            <div id="arrows"></div>
+
+            <div class="tiangle_A">
+              <div class="base_A"></div>
+            </div>
+            <div class="tiangle_B">
+              <div class="base_B"></div>
+              <div class="circle_1"></div>
+              <div class="circle_2"></div>
+              <div class="circle_3"></div>
+            </div>
+            <div class="canvas_text_A">A</div>
+            <div class="canvas_text_B">B</div>
+            <div class="horizontal_O" id="O_lenght">
+              <h1 id="a_text">a=</h1>
+            </div>
+            <div class="O_section" id="O_line">
+              <div class="O_line"></div>
+              <div class="O_line_45"></div>
+              <h1>O</h1>
+              
+            </div>
+            <div class="L_line">
+              <h1 id="L_text">L=</h1>
+            </div>
+            <div class="zero_section">
+              <div class="zero_line"></div>
+              
+              <div class="zero_line_45"></div>
+            </div>
+
+            <div class="L_size">
+              <div class="L_line_45"></div>
+            </div>
+            <div class="L_size_rigrht">
+              <div class="L_line_45"></div>
+            </div>
+          </div>
+          <h1 class="Ra" id="Ra">Ra = 0</h1>
+        </div>
+
+        <div class="scheme" style="display: block;" id="img_scheme">
           <img src="scheme.jpg" alt="" class="drawing" />
-          <input type="number" class="form-control" id="a" value="0" />
-          <h1 class="Ra" id="Ra"></h1>
-          <input type="number" class="form-control" id="L" value="12" />
+        </div>
+
+        <div class="L_a_Ra">
+          <div class="small_div">
+            <h1 class="">a=</h1>
+            <input
+              type="number"
+              class="form-control input_data"
+              id="a"
+              value="6"
+            />
+          </div>
+          <div class="small_div">
+            <h1 class="">L=</h1>
+            <input
+              type="number"
+              class="form-control input_data"
+              id="L"
+              value="12"
+            />
+          </div>
         </div>
 
         <div class="inputs" id="inputs">

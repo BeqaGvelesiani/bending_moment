@@ -38,7 +38,7 @@ export function find_B(A, xArr, pArr, current_P) {
   let x = [];
   for (var i = 0; i < current_P; i++) {
     x.push(xArr[i]);
-    console.log(`x${i+1} = ${xArr[i]}`);
+    console.log(`x${i + 1} = ${xArr[i]}`);
     console.log(x);
 
     let y = x.reduce((acumulator, number) => {
@@ -51,3 +51,16 @@ export function find_B(A, xArr, pArr, current_P) {
   }
   return B;
 }
+
+export function add_p(percent, id, P) {
+  const div = document.createElement("div");
+  div.setAttribute("id", `A_P${id}`);
+  div.setAttribute('class', 'arrow');
+  div.style.left = `${percent}%`;
+  div.innerHTML = `
+    <div class="arrow_head"></div>
+    <h1 class="arrow_name">${P}</h1>
+  `;
+  document.getElementById("arrows").appendChild(div);
+}
+  
