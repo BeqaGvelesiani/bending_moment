@@ -119,7 +119,7 @@ function go_go() {
   console.log("current_P = " + current_P);
 
   let O = Ra * A - find_B(A, xArr, pArr, current_P);
-  final_result.innerText = `მღუნავი მომენტი O წერტილისთვის = ${O.toFixed(3)}`;
+  final_result.innerText = `მღუნავი მომენტი O კვეთისთვის = ${O.toFixed(3)}`;
 }
 
 function add_wheel() {
