@@ -45,7 +45,7 @@ body {
   font-size: 1.5rem;
   border: var(--gray2) 1px solid;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   width: fit-content;
   margin: auto;
   background: var(--white);
@@ -193,7 +193,7 @@ body {
 
 .drawing {
   border: #393646 solid 1px;
-  border-radius: 16px;
+  border-radius: 4px;
   width: 100%;
   margin: 1rem auto;
 }
@@ -452,14 +452,13 @@ body {
 }
 
 .f {
-  background-color: var(--black_for_text);
+  background-color: #2C3333;
   color: var(--white);
   display: grid;
   place-items: center;
   height: 3rem;
   width: 100vw;
   border-radius: 0;
-  opacity: 0.9;
   z-index: 1;
 }
 
@@ -483,13 +482,9 @@ body {
 
 .QR {
   position: absolute;
-  bottom: -20vh;
-  width: 10rem;
-  height: 10rem;
-  width: fit-content;
-  height: fit-content;
-  border: var(--black_for_text) solid 1rem;
-  border-radius: 1rem;
+  bottom: -40vh;
+  border: var(--black_for_text) solid 0.1rem;
+  border-radius: 0.3rem;
   width: 10rem;
   height: auto;
   display: block;
@@ -497,26 +492,30 @@ body {
   animation-duration: 1000ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-delay: 0ms;
-  animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
-  opacity: 1;
-  z-index: 0;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @keyframes moveUp {
   0% {
     transform: translateY(0px);
+    opacity: 0;
+    
   }
   100% {
-    transform: translateY(-70vh);
+    transform: translateY(-80vh);
+    opacity: 1;
+    box-shadow: 0px 0px 700px 300px rgb(0, 0, 0);
   }
 }
 
 @keyframes movedown {
   0% {
-    transform: translateY(-70vh);
+    transform: translateY(-80vh);
+    opacity: 1;
+    box-shadow: 0px 0px 700px 300px rgb(0, 0, 0);
   }
   100% {
-    transform: translateY(70vh);
+    transform: translateY(80vh);
+    opacity: 0;
   }
 }
