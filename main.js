@@ -3,6 +3,7 @@ import { sum_of_array_intil_number } from "./functions.js";
 import { array_until_number } from "./functions.js";
 import { find_B } from "./functions.js";
 import { add_p } from "./functions.js";
+import { swap } from "./functions.js";
 
 let L = Number(document.getElementById("L").value);
 const actionBTN = document.getElementById("do_it");
@@ -130,13 +131,13 @@ function add_wheel() {
         <h1 class="Pnumber">${count}</h1>
           <input
             type="number"
-            class="form-control input_data"
+            class="input"
             id="X${count}"
             placeholder="X${count}"
           />
           <input
             type="number"
-            class="form-control input_data"
+            class="input"
             id="P${count}"
             placeholder="P${count}"
           />
@@ -177,11 +178,23 @@ document.getElementById("L").addEventListener("keyup", function () {
 document.getElementById("L").addEventListener("mouseup", function () {
   swap();
   set_o_section_location((a.value / document.getElementById("L").value) * 100);
-  go_go()
+  go_go();
 });
 
-function swap() {
-  document.getElementById("img_scheme").style.display = "none";
-  document.getElementById("canvas_drawing").style.display = "grid";
-}
+X1.addEventListener("mouseup", function () {
+  swap();
+  go_go();
+});
 
+X1.addEventListener("keyup", function () {
+  swap();
+  go_go();
+});
+
+document.getElementById("Name").addEventListener("mouseenter", function () {
+  document.getElementById("QR").style.animationName = "moveUp";
+});
+
+document.getElementById("Name").addEventListener("mouseleave", function () {
+  document.getElementById("QR").style.animationName = "movedown";
+});

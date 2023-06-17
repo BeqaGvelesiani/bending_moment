@@ -55,7 +55,7 @@ export function find_B(A, xArr, pArr, current_P) {
 export function add_p(percent, id, P) {
   const div = document.createElement("div");
   div.setAttribute("id", `A_P${id}`);
-  div.setAttribute('class', 'arrow');
+  div.setAttribute("class", "arrow");
   div.style.left = `${percent}%`;
   div.innerHTML = `
     <div class="arrow_head"></div>
@@ -63,4 +63,9 @@ export function add_p(percent, id, P) {
   `;
   document.getElementById("arrows").appendChild(div);
 }
-  
+
+export function swap() {
+  document.getElementById("img_scheme").style.display = "none";
+  document.getElementById("canvas_drawing").style.display = "grid";
+}
+
